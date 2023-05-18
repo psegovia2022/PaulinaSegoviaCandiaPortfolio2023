@@ -21,10 +21,10 @@
 </head>
 <body>
 
-    <header>
-
+    <header class="navLogo">
+    
         <nav class="topNav">
-            <img src="images/logo.png" alt="Logo showing coding icon, microscope, article and microphone">
+            <a href="home.html"> <img src="images/logo.png" id="logo" alt="Logo showing coding icon, microscope, article and microphone"></a>
             <ul class="menu">
                 <li> 
                     <a href="home.html" class="active menuItem"> Home </a> </li>
@@ -46,11 +46,14 @@
                 <i class="fa-regular fa-rectangle-xmark closeIcon"></i>
             </button>
         </nav>
+
+        <div class="logoBig"></div>
     </header>
     <main>
         <article>
             <h1>About me</h1>
-            <img src="images/paulinaSegoviaPictureSmall.png" alt="Paulina Segovia Candia portrait">
+            <img src="images/paulinaSegoviaPictureSmall.png" id="portrait"
+            alt="Paulina Segovia Candia portrait">
             <p>I am a programmer, science communicator, translator and gender equality expert. </p>
              <p>I am passionate about making this world a more just place for all through technology, diversity, equity, and inclusion, focusing on gender equality.</p>
             <p> I am continually updating my knowledge to be a professional, not only passionate but efficient and competent.</p>
@@ -61,14 +64,28 @@
         </article>
     </main>
     <footer> 
-        <div>
+        
+        <div class="footerDiv">
+            <section class="fullName">
+            
             <p>Paulina</p> 
             <p>Segovia</p>
             <p>Candia</p>
-    
-            <p>&copy;Copyright 2023 </p>
+            
+            </section>
+
+            <img id="footerIcons"
+            src="images/footerIconsSmall.png" alt="Bigger icons coding article microscope and microphone">
+
         </div>
-        <img src="" alt="">
+
+        <div class="wrapper">
+            <div class="circle c1"></div>
+            <div class="circle c2" ></div>
+            <div class="circle c3"></div>
+        </div>
+
+        <p id="copy">&copy;Copyright 2023 </p>
     </footer>
     
     

@@ -15,35 +15,35 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/script.js" defer></script>
 </head>
 <body>
 
     <header>
-        <section class="topHeader">
-            <img src="images/logoPurple.png" alt="Logo showing microscope, article and microphone">
-            <div class="titleSubtitle">
-                <h1>Paulina Segovia Candia</h1>
-                <h2>Programmer | Science Communicator</h2>
-            </div>
-        </section>
-        <nav>
-            <ul>
+        <nav class="topNav">
+            <a href="../home.html"> <img src="../images/logo.png" id="logo" alt="Logo showing coding icon, microscope, article and microphone"></a>
+            <ul class="menu">
                 <li> 
-                    <a href="pages/programming.html">Programming</a>
+                    <a href="../home.html" class=" menuItem"> Home </a> </li>
+                <li> 
+                    <a href="../pages/programming.html" class=" menuItem">Programming</a>
                 </li>
                 <li> 
-                    <a href="pages/scicomm.html">Science Communication</a>
+                    <a href="../pages/scicomm.html" class=" active menuItem">Science Communication</a>
                 </li>
                 <li> 
-                    <a href="pages/opinion.html">Opinion Articles</a>
+                    <a href="../pages/opinion.html" class="menuItem">Opinion Articles</a>
                 </li>
                 <li> 
-                    <a href="pages/contact.html">Contact</a> 
+                    <a href="../pages/contact.html" class="menuItem">Contact</a> 
                 </li>
             </ul>
+            <button class="icon">
+                <i class="fa-solid fa-bars menuIcon"></i>
+                <i class="fa-regular fa-rectangle-xmark closeIcon"></i>
+            </button>
         </nav>
     </header>
     <main>
@@ -83,15 +83,28 @@
         </article>
     </main>
     <footer> 
-        <div>
-        <p>Paulina</p> 
-        <p>Segovia</p>
-        <p>Candia</p>
-
-        <p>&copy;Copyright 2023 </p>
-        </div>
-        <img src="" alt="">
         
+        <div class="footerDiv">
+            <section class="fullName">
+            
+            <p>Paulina</p> 
+            <p>Segovia</p>
+            <p>Candia</p>
+            
+            </section>
+
+            <img id="footerIcons"
+            src="../images/footerIconsSmall.png" alt="Bigger icons coding article microscope and microphone">
+
+        </div>
+
+        <div class="wrapper">
+            <div class="circle c1"></div>
+            <div class="circle c2" ></div>
+            <div class="circle c3"></div>
+        </div>
+
+        <p id="copy">&copy;Copyright 2023 </p>
     </footer>
     
     

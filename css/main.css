@@ -13,59 +13,79 @@
     --sec-alt-color: #b6efd8;
 }
 
+/************************ BASICS ************************/
+
 body {
     font-family: var(--main-font-type);
     font-weight: 300;
 }
 
-
-/* HEADER */
-
-header {
-    background-color: var(--main-color);
-    padding: 1em;
-}
-
 h1 {
     /* color: #fff; */
-    font-size: 1.8em;
+    font-size: 2em;
     text-transform: uppercase;
-    margin-bottom: .25em;
+    margin: 1em;
+    font-weight: var(--darkest-font);
 }
 
 h2 {
     /* color: #fff; */
     font-size: 1.2em;
     text-transform: uppercase;
-    line-height: 1.25em;
+    line-height: 1.5em;
 }
 
-/* NAVIGATION  */
+p {
+    font-size: 1.25em;
+    line-height: 1.3em;
+    margin-bottom: .8em;
+}
+
+img {
+    max-width: 100%;
+    width: 100%
+  }
+
+/************************ HEADER ************************/
+
+header {
+    background-color: var(--main-color);
+    padding: 1em;
+    /* margin-bottom: 2em; */
+}
+
+
+#logo {
+    width: 80%;
+}
+/************************ NAVIGATION  ************************/
 
 .icon {
-    background-color: var(--sec-main-color);
+    background-color: var(--main-color);
     border-radius: 6px ;
     border: solid 3px var(--ter-main-color);
     position: fixed;
+    /* position: sticky; */
     z-index: 100;
-    top: 1em;
+    top: 3em;
     right: 1em;
     padding: 4px;
     cursor: pointer;
 }
 
 .menuIcon, .closeIcon {
+    /* position: sticky; */
     font-size: 3em;
-    color: #fff;
-    
+    color: #fff;   
 }
 
 .closeIcon {
     display: none;
 }
 
-/* header {
-    position: fixed;
+/* nav.topnav {
+    display: block;
+    position: sticky;
 } */
 
 nav ul {
@@ -81,7 +101,7 @@ nav ul {
     background: var(--main-color);
     color: white;
     list-style: none;
-    padding-top: 4rem;
+    padding-top: 5.5rem;
     line-height: 3em;
 }
 
@@ -103,12 +123,112 @@ nav a:hover {
 }
 
 .active {
-    background-color: var(--alt-color);
+    background-color: var(--sec-alt-color);
     color: black;
 }
 
 
+/************************ MAIN ***********************/
+
+main {
+    background-color: var(--ter-main-color);
+    padding-bottom: 2em;
+}
+/************************ article ************************/
+article {
+    margin: auto;
+    padding: 1em 1em 2em;
+    max-width: 70%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#portrait {
+    width: 40%;
+    border: solid 3px var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--alt-color);
+    margin-bottom: 2em;
+}
+
+/************************ FOOTER ***********************/
+
+footer {
+    /* background-color: var(--ter-main-color); */
+    padding: 3em 3em 1em 3em; 
+}
+
+.footerDiv {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fullName {
+    color: var(--alt-color);
+    font-weight: var(--dark-font);
+    text-transform: uppercase;
+    font-size: 1.3em;
+    /* margin-bottom: 2em; */
+}
+
+#copy {
+    font-weight: var(--normal-font);
+    text-transform: uppercase;
+    font-size: 1em;
+    color: var(--main-color);
+    margin-top: 2em;
+}
+
+.fullName p {
+    margin-bottom: 0; } 
+
+#footerIcons {
+    width: 60%;
+}
+
+/********************** colorful dots **********************/
+
+.wrapper {
+    display: flex;
+    margin: 2em auto;
+    /* justify-content: center; */
+}
+
+.circle {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    transition: margin 2s;
+}
+
+.wrapper:hover .circle {
+    margin-left: 150px;
+}
+
+.c1 {
+    background-color: var(--main-color);
+    transition-timing-function: linear;
+}
+
+.c2 {
+    background-color: var(--sec-main-color);
+}
+
+.c3 {
+    background-color: var(--alt-color);
+}
+
 @media only screen and (min-width:800px)  {
+    button {
+        display: none;
+    }
+    
     nav ul {
         display: flex;
         flex-direction: row;
@@ -116,6 +236,32 @@ nav a:hover {
         justify-content: center;
         gap: .5em; 
         transform: translateY(0);
+        padding: 0;
+        border-bottom: solid 1px var(--sec-alt-color);
+    }
+
+    nav ul li a {
+        margin: 0;
     }
     
+    /* #logo {
+       max-width: 400px;
+       padding-top: 100px;
+    } */
+
+    #logo {
+        display: none;
+    }
+
+    div.logoBig {
+        height: 500px;
+        margin: auto;
+        max-width: 50%;
+        background-image: url("../images/logoBig2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: var(--main-color);
+
+    }
 }
