@@ -51,9 +51,7 @@ img {
 header {
     background-color: var(--main-color);
     padding: 1em;
-    /* margin-bottom: 2em; */
 }
-
 
 #logo {
     width: 80%;
@@ -64,14 +62,16 @@ header {
     background-color: var(--main-color);
     border-radius: 6px ;
     border: solid 3px var(--ter-main-color);
-    position: fixed;
+    position: absolute;
+    /* position: fixed; */
     /* position: sticky; */
     z-index: 100;
-    top: 3em;
-    right: 1em;
+    top: 1.5em;
+    right: 2em;
     padding: 4px;
     cursor: pointer;
 }
+
 
 .menuIcon, .closeIcon {
     /* position: sticky; */
@@ -118,12 +118,12 @@ nav a {
  display: block;
 }
 nav a:hover {
-    background-color: var(--ter-main-color);
+    background-color: var(--sec-alt-color);
     color: black;
 }
 
 .active {
-    background-color: var(--sec-alt-color);
+    background-color: var(--ter-main-color);
     color: black;
 }
 
@@ -132,12 +132,15 @@ nav a:hover {
 
 main {
     background-color: var(--ter-main-color);
-    padding-bottom: 2em;
+    padding: 3em 0;
 }
 /************************ article ************************/
 article {
+    /* background-color: #fff; */
+    border: solid 3px var(--sec-main-color);
+    border-radius: 6px;
     margin: auto;
-    padding: 1em 1em 2em;
+    padding: 2em;
     max-width: 70%;
     align-items: center;
     justify-content: center;
@@ -153,6 +156,118 @@ article {
     box-shadow: 0 0 0 3px var(--alt-color);
     margin-bottom: 2em;
 }
+
+/************************ programming ***********************/
+
+#nervetoolImg {
+    border: solid 1px var(--main-color);
+    border-radius: 6px;
+    margin-top: 2em;
+}
+
+button {
+    border-radius: 6px;
+    background-color: var(--main-color);
+    margin-top: 2em;
+}
+
+#nerveBtn {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em;
+    /* margin: .5em 0; */
+    font-size: 1.3em;
+    display: block;
+  
+}
+
+#nerveBtn:hover {
+    background-color: var(--sec-main-color);
+    border: solid 2px var(--main-color);
+    color: black;
+}
+
+
+    /***************** scicomm ******************/
+
+    .carousel {
+        width: 90%;
+        /* max-width: 800px; */
+        height: 500px;
+        /* border-radius: 6px; */
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .carouselItems img {
+        width: 80%;
+    }
+
+    .carouselContainer {
+        background-color: var(--sec-main-color);
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .carouselItems {
+        list-style-type: none;
+        height: 100%;
+        position: relative;
+        transition: transform .25s ease-in;
+    }
+    
+    .carouselSlide {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        /* background-color: var(--main-color); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+    
+    .carouselBtn {
+        background-color: transparent;
+        border: none;
+        color: var(--sec-main-color);
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    
+    .carouselBtn.leftBtn { left: -40px; }
+    .carouselBtn.rightBtn { right: -40px; }
+    
+    .carouselNav {
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem 0;
+        position: relative;
+        bottom: 0;
+    }
+    
+    .carouselIndicator {
+        background-color: var(--main-color);
+        border: 0;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    
+    .carouselIndicator.currentSlide {
+        background-color: var(--sec-main-color);
+    }
+    
+    .isHidden {
+        display: none;
+    }
 
 /************************ FOOTER ***********************/
 
@@ -225,7 +340,9 @@ footer {
 }
 
 @media only screen and (min-width:800px)  {
-    button {
+
+    /*************** HEADER *******************/
+    button.icon {
         display: none;
     }
     
@@ -244,11 +361,6 @@ footer {
         margin: 0;
     }
     
-    /* #logo {
-       max-width: 400px;
-       padding-top: 100px;
-    } */
-
     #logo {
         display: none;
     }
@@ -264,4 +376,54 @@ footer {
         background-color: var(--main-color);
 
     }
+    /*********************************************/
+    /*************** MAIN *******************/
+    /*********************************************/
+     article {
+        font-size: 1.2em;
+        padding: 2em 5em;
+        max-width: 50%;
+    
+    }
+    
+    #portrait {
+        width: 30%;
+    }
+
+    /*************** programming ***************/
+
+    #nerveBtn {
+        padding: 1.5em 5em;
+        font-size: 1.5em;
+        display: block; 
+    }
+
+
+    /*********************************************/
+    /***************** FOOTER ********************/
+    /*********************************************/
+    .fullName {
+        font-size: 1.6em;
+    }
+    
+    #copy {
+        font-size: 1.5em;
+    }
+    
+    .circle {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        transition: margin 2s;
+    }
+
+    .wrapper:hover .circle {
+        margin-left: 250px;
+    }
+    
+    #footerIcons {
+        width: 40%;
+    }
+
 }
