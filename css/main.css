@@ -29,10 +29,14 @@ h1 {
 }
 
 h2 {
-    /* color: #fff; */
+    color: var(--main-color);
+    font-weight: var(--dark-font);
     font-size: 1.2em;
     text-transform: uppercase;
     line-height: 1.5em;
+    text-align: center;
+    /* padding-right: 2em; */
+    margin-bottom: 1em;
 }
 
 p {
@@ -82,11 +86,6 @@ header {
 .closeIcon {
     display: none;
 }
-
-/* nav.topnav {
-    display: block;
-    position: sticky;
-} */
 
 nav ul {
     text-transform: uppercase;
@@ -171,7 +170,7 @@ button {
     margin-top: 2em;
 }
 
-#nerveBtn {
+#nerveBtn, .goToCM a {
     color: #fff;
     text-decoration: none;
     padding: 1em;
@@ -181,58 +180,65 @@ button {
   
 }
 
-#nerveBtn:hover {
+#nerveBtn:hover, .goToCM a:hover {
     background-color: var(--sec-main-color);
     border: solid 2px var(--main-color);
     color: black;
 }
 
+/***************** scicomm ******************/
 
-    /***************** scicomm ******************/
+.cmArticle {
+ padding: 1.5em 2.6em 2.5em 2.6em;
+}
 
-    .carousel {
-        width: 90%;
+.carousel {
+        width: 100%;
         /* max-width: 800px; */
         height: 500px;
         /* border-radius: 6px; */
         margin: 0 auto;
         position: relative;
+
     }
 
-    .carouselItems img {
-        width: 80%;
+.carouselItems img {
+        width: 85%;
+
     }
 
-    .carouselContainer {
-        background-color: var(--sec-main-color);
+.carouselContainer {
+        background-color: #fff;
+        border-radius: 6px;
         height: 100%;
         position: relative;
         overflow: hidden;
     }
     
-    .carouselItems {
+.carouselItems {
         list-style-type: none;
         height: 100%;
         position: relative;
         transition: transform .25s ease-in;
     }
     
-    .carouselSlide {
+li.carouselSlide {
         position: absolute;
         top: 0;
         bottom: 0;
+        max-width: 90%;
         width: 100%;
-        /* background-color: var(--main-color); */
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 1.5rem;
     }
-    
+
+  
     .carouselBtn {
         background-color: transparent;
         border: none;
-        color: var(--sec-main-color);
+        color: var(--main-color);
         font-size: 2rem;
         position: absolute;
         top: 50%;
@@ -240,8 +246,11 @@ button {
         cursor: pointer;
     }
     
-    .carouselBtn.leftBtn { left: -40px; }
-    .carouselBtn.rightBtn { right: -40px; }
+    .carouselBtn.leftBtn { 
+        left: -45px;
+        z-index: 10; }
+
+    .carouselBtn.rightBtn { right: -45px; }
     
     .carouselNav {
         display: flex;
@@ -268,6 +277,12 @@ button {
     .isHidden {
         display: none;
     }
+
+    /* .goToCM a {
+        color: #fff;
+        text-decoration: none;
+        padding: ;
+    } */
 
 /************************ FOOTER ***********************/
 
@@ -398,7 +413,29 @@ footer {
         display: block; 
     }
 
+    /*************** scicomm ***************/
 
+    .cmArticle {
+        padding: 1.5em 2.8em 2.8em 2.8em;
+       }
+
+    .carousel {
+        /* height:650px; */
+        width: 80%;
+    }
+    
+    .carouselBtn {
+        font-size: 2.5rem;
+    
+    } 
+
+
+    /* .carouselContainer {
+        width: 90%;
+    } */
+    .carouselItems img {
+        width: 80%;
+    }
     /*********************************************/
     /***************** FOOTER ********************/
     /*********************************************/
@@ -426,4 +463,34 @@ footer {
         width: 40%;
     }
 
+}
+
+
+
+@media only screen and (min-width:1000px)  {
+    .carousel {
+        height:600px;
+        /* width: 80%; */
+    }
+}
+
+@media only screen and (min-width:1456px)  {
+    .carousel {
+        height:650px;
+        /* width: 80%; */
+    }
+}
+
+@media only screen and (min-width:1621px)  {
+    .carousel {
+        height:700px;
+        /* width: 80%; */
+    }
+}
+
+@media only screen and (min-width:1800px)  {
+    .carousel {
+        height:750px;
+        /* width: 80%; */
+    }
 }
