@@ -566,9 +566,13 @@ footer {
 
 
 @media only screen and (min-width:1000px)  {
-
+    /* article p {
+        text-align: left;
+    } */
+    
     .carousel {
         height:600px;
+        /* width: 80%; */
     }
     .smGrid {
         display: grid;
@@ -577,6 +581,7 @@ footer {
     }
     #signUpForm {
         grid-column: 1 / 3;
+        /* align-items: center; */
         margin: auto;
         width: 60%;
     }
